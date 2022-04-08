@@ -1,0 +1,108 @@
+<!---
+id: practice-test
+title: Practice Test
+description: An in house designed quiz to determin how well you have understood the general concepts
+sidebar_label: 🧠 Practice Quiz
+keywords: [quiz, test, interview, questions]
+--->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice Test</title>
+  </head>
+
+  <body>
+
+    <label id="question-1">Q1: Should you accept an interviewers first offer?</label>
+      <div>
+        <input type="radio" name="quest1" value="C" id="C1"><span>No</span></input></br>
+        <input type="radio" name="quest1" value="W"><span>Yes</span></input></br>
+        <input type="radio" name="quest1" value="W"><span>The interviewie will provide the first offer</span></input></br>
+      </div></br>
+
+    <label id="question-2">Q2: How well should you understand a language to comfortably place it on your resume?</label>
+      <div>
+        <input type="radio" name="quest2" value="W"><span>Be able to wright hello world program</span></input></br>
+        <input type="radio" name="quest2" value="W"><span>Know the generilzed commands</span></input></br>
+        <input type="radio" name="quest2" value="C" id="C2"><span>Understand the languages applications and its implemtation in broder structures</span></input></br>
+      </div></br>
+
+    <label id="question-3">Q3: What is the best Language to Know?</label>
+      <div>
+        <input type="radio" name="quest3" value="W"><span>Spanish</span></input></br>
+        <input type="radio" name="quest3" value="C" id="C3"><span>The one most applicable to your field</span></input></br>
+        <input type="radio" name="quest3" value="W"><span>Java</span></input></br>
+      </div></br> 
+
+    <label id="question-4">Q4: Is self presintation importnant during an Interview?</label>
+      <div>
+        <input type="radio" name="quest4" value="W"><span>No</span></input></br>
+        <input type="radio" name="quest4" value="C" id="C4"><span>Yes</span></input></br>
+      </div></br> 
+
+    <label id="question-5">Q5: What should be worn during an interview?</label>
+      <div>
+        <input type="radio" name="quest5" value="W"><span>Jogging pants and a t shirt</span></input></br>
+        <input type="radio" name="quest5" value="C" id="C5"><span>Presentable cloths which align with the companies dress code</span></input></br>
+        <input type="radio" name="quest5" value="W"><span>Shorts and a tank top</span></input></br>
+      </div></br> 
+
+    <label id="question-6">Q6: How should you introduce yourself?</label>
+      <div>
+        <input type="radio" name="quest6" value="W"><span>"Yo im John Cena how is you"</span></input></br>
+        <input type="radio" name="quest6" value="W"><span>"Hello im Micky, how are you?"</span></input></br>
+        <input type="radio" name="quest6" value="C" id="C6"><span>"It's nice to finaly meet you in person, i'm Geroge Lucas and i'm really looking forward to this interview!"</span></input></br>
+      </div></br> 
+
+    <label id="question-7">Q7: What is 1067-32?</label>
+      <div >
+        <input type="radio" name="quest7" value="W"><span>1099</span></input></br>
+        <input type="radio" name="quest7" value="W"><span>1053</span></input></br>
+        <input type="radio" name="quest7" value="C" id="C7"><span>1035</span></input></br>
+      </div></br> 
+
+    <label id="question-8">Q8: Is it always importnat to re-read your application and the job osting before an interview?</label>
+      <div>
+        <input type="radio" name="quest8" value="W"><span>No</span></input></br>
+        <input type="radio" name="quest8" value="C" id="C8"><span>Yes</span></input></br>
+        <input type="radio" name="quest8" value="W"><span>Only if the job is outside of your usual field</span></input></br>
+      </div></br> 
+
+    <label id="question-9">Q9: swhat is the square root of 36?</label>
+      <div>
+        <input type="radio" name="quest9" value="C" id="C9"><span>6</span></input></br>
+        <input type="radio" name="quest9" value="W"><span>33</span></input></br>
+        <input type="radio" name="quest9" value="W"><span>4</span></input></br>
+      </div></br> 
+
+    <label id="question-10">Q10: When is it apropriate to curse during an interview?</label>
+      <div>
+        <input type="radio" name="quest10" value="C" id="C10"><span>Never</span></input></br>
+        <input type="radio" name="quest10" value="W"><span>If the interviewr does first</span></input></br>
+        <input type="radio" name="quest10" value="W"><span>At will</span></input></br>
+      </div></br> 
+
+    <button class="submit" onclick="getScore()" type="submit" value="Display">Submit Quiz</button>
+    <h2 id="quiz-results-head">reuslts</h2>
+    <p id="quiz-results"></p>
+    <script type="text.javascript" src="js quiz.js"></script>
+
+    <script> 
+    function getScore(){
+      var amountCorrect = 0;
+      var setC = "C";
+      var converter = "";
+      var idCaller = "";
+      for(var i = 1; i < 11; i++){
+          let converter = i.toString();
+          let idCaller = setC.concat(converter)
+          if(document.getElementById(idCaller).checked){
+            amountCorrect++;
+          }
+        }
+    document.getElementById('quiz-results').innerHTML = "Score: " + amountCorrect + "/10";
+    }
+    </script>
+
+  </body>
+</html>
